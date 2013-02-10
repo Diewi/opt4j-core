@@ -12,33 +12,21 @@
  * You should have received a copy of the GNU Lesser General Public
  * License along with Opt4J. If not, see http://www.gnu.org/licenses/. 
  */
+package org.opt4j.common.logger;
 
-package org.opt4j.viewer;
-
-import javax.swing.JPanel;
+import org.opt4j.config.Icons;
+import org.opt4j.config.annotations.Category;
+import org.opt4j.config.annotations.Icon;
+import org.opt4j.start.Opt4JModule;
 
 /**
- * The {@link Widget} is an interface for standard panel for the
- * {@link Viewport}.
+ * The {@link OutputModule}.
  * 
  * @author lukasiewycz
  * 
  */
-public interface Widget {
-
-	/**
-	 * Returns the panel with the content.
-	 * 
-	 * @return the panel with the content
-	 */
-	public JPanel getPanel();
-
-	/**
-	 * Called once after the widget is added to the {@link Viewport}.
-	 * 
-	 * @param viewport
-	 *            the base viewport
-	 */
-	public void init(Viewport viewport);
+@Icon(Icons.APPLICATION)
+@Category
+public abstract class OutputModule extends Opt4JModule {
 
 }
