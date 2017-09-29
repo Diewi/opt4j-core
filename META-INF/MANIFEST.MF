@@ -10,7 +10,22 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: org.opt4j.core.Opt4JCoreActivator
 Require-Bundle: org.eclipse.core.runtime;bundle-version="3.9.100";visibility:=reexport
-Export-Package: org.opt4j.common.archive;uses:="org.opt4j.core.common.archive,org.opt4j.core.problem,org.opt4j.core",
+Export-Package: com.google.inject,
+ com.google.inject.assistedinject,
+ com.google.inject.binder,
+ com.google.inject.internal,
+ com.google.inject.internal.asm,
+ com.google.inject.internal.cglib.core,
+ com.google.inject.internal.cglib.proxy,
+ com.google.inject.internal.cglib.reflect,
+ com.google.inject.internal.cglib.transform,
+ com.google.inject.internal.util,
+ com.google.inject.matcher,
+ com.google.inject.multibindings,
+ com.google.inject.name,
+ com.google.inject.spi,
+ com.google.inject.util,
+ org.opt4j.common.archive;uses:="org.opt4j.core.common.archive,org.opt4j.core.problem,org.opt4j.core",
  org.opt4j.common.random;uses:="org.opt4j.core.common.random",
  org.opt4j.core,
  org.opt4j.core.common.archive;
