@@ -3,7 +3,16 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Opt4J Core
 Bundle-SymbolicName: org.opt4j.core;singleton:=true
 Bundle-Version: 2.11.0.qualifier
-Bundle-ClassPath: .
+Bundle-ClassPath: .,
+ lib/aopalliance-1.0.jar,
+ lib/guava-25.1-jre.jar,
+ lib/guice-4.2.0-sources.jar,
+ lib/guice-4.2.0.jar,
+ lib/guice-assistedinject-4.2.0-sources.jar,
+ lib/guice-assistedinject-4.2.0.jar,
+ lib/guice-multibindings-4.2.0-sources.jar,
+ lib/guice-multibindings-4.2.0.jar,
+ lib/junit-4.12.jar
 Bundle-Vendor: fortiss GmbH
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
