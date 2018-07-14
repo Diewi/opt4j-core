@@ -23,6 +23,7 @@
 package org.opt4j.core.start;
 
 import java.lang.reflect.Type;
+import java.util.Collection;
 import java.util.Set;
 
 import org.opt4j.core.Genotype;
@@ -40,7 +41,10 @@ import com.google.inject.Guice;
 import com.google.inject.Inject;
 import com.google.inject.Injector;
 import com.google.inject.Key;
+import com.google.inject.Module;
+import com.google.inject.Provider;
 import com.google.inject.TypeLiteral;
+import com.google.inject.name.Named;
 
 /**
  * The {@link Opt4JTask} executes one optimization process.
@@ -102,6 +106,14 @@ public class Opt4JTask extends Task implements ControlListener, OptimizerIterati
 		if (closeOnStop) {
 			close();
 		}
+	}
+	
+	public void init(Collection<Module> modules) {
+		// Add the Opt4JTask provider that enables accessing the opt4 injector. Mandatory.
+		if(!isInit) {
+			modules.add(new Opt4JTaskProvider(this));
+		}
+		super.init(modules);
 	}
 
 	/**
@@ -291,5 +303,4 @@ public class Opt4JTask extends Task implements ControlListener, OptimizerIterati
 			listener.stateChanged(this);
 		}
 	}
-
 }
