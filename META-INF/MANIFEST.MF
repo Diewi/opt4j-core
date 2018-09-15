@@ -6,13 +6,10 @@ Bundle-Version: 2.11.0.qualifier
 Bundle-ClassPath: .,
  lib/aopalliance-1.0.jar,
  lib/guava-25.1-jre.jar,
- lib/guice-4.2.0-sources.jar,
- lib/guice-4.2.0.jar,
- lib/guice-assistedinject-4.2.0-sources.jar,
- lib/guice-assistedinject-4.2.0.jar,
- lib/guice-multibindings-4.2.0-sources.jar,
- lib/guice-multibindings-4.2.0.jar,
- lib/junit-4.12.jar
+ lib/junit-4.12.jar,
+ lib/guice-4.2.1-SNAPSHOT.jar,
+ lib/guice-assistedinject-4.2.1-SNAPSHOT.jar,
+ lib/guice-multibindings-4.2.1-SNAPSHOT.jar
 Bundle-Vendor: fortiss GmbH
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
@@ -34,6 +31,8 @@ Export-Package: com.google.inject,
  com.google.inject.name,
  com.google.inject.spi,
  com.google.inject.util,
+ org.aopalliance.aop,
+ org.aopalliance.intercept,
  org.opt4j.common.archive;uses:="org.opt4j.core.common.archive,org.opt4j.core.problem,org.opt4j.core",
  org.opt4j.common.random;uses:="org.opt4j.core.common.random",
  org.opt4j.core,
