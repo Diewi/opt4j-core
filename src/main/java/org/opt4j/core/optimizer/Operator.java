@@ -19,7 +19,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  *******************************************************************************/
- 
+
 
 package org.opt4j.core.optimizer;
 
@@ -27,12 +27,19 @@ import org.opt4j.core.Genotype;
 
 /**
  * The {@link Operator} is the basic interface for all operators.
- * 
+ *
  * @author lukasiewycz
- * 
+ * @author diewald
+ *
  * @param <G>
  *            the type of genotype
  */
 public interface Operator<G extends Genotype> {
 
+	/**
+	 * Returns the basic operators type, e.g., "Mutate" or "Copy".
+	 *
+	 * @return basic type of the concrete operation.
+	 */
+	Class<? extends Operator<?>> getOperatorType();
 }
