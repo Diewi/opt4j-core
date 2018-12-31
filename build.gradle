@@ -13,3 +13,13 @@ processResources {
 		filter(ReplaceTokens, tokens: [version : project.version, date : project.dateISO])
 	}
 }
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+            exclude '**/Opt4JCoreActivator.java'
+            exclude 'test/**'
+       }
+   }
+}
