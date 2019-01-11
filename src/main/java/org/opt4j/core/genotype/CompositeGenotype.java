@@ -26,6 +26,7 @@ package org.opt4j.core.genotype;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -76,6 +77,8 @@ import org.opt4j.core.Genotype;
 public class CompositeGenotype<K, V extends Genotype> implements Genotype, Iterable<Entry<K, V>> {
 
 	protected final Map<K, V> map = new HashMap<K, V>();
+
+	private List<Genotype> modifiedGenotypes;
 
 	/**
 	 * Constructs a {@link CompositeGenotype}.
@@ -171,6 +174,14 @@ public class CompositeGenotype<K, V extends Genotype> implements Genotype, Itera
 	@Override
 	public Iterator<Entry<K, V>> iterator() {
 		return map.entrySet().iterator();
+	}
+
+	public List<Genotype> getModifiedGenotype() {
+		return modifiedGenotypes;
+	}
+
+	public void setModifiedGenotypes(List<Genotype> modifiedGenotypes) {
+		this.modifiedGenotypes = modifiedGenotypes;
 	}
 
 	/*
